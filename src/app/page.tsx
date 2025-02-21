@@ -1,3 +1,3 @@
-import HomePage from "@/page/Home";
+import HomePage from "@/scenes/Home";
 
 export default HomePage;

@@ -1,2 +1,2 @@
-import BlogPost from "@/page/BlogPost";
+import BlogPost from "@/scenes/BlogPost";
 export default BlogPost;

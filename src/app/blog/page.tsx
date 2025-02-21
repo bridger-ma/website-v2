@@ -1,3 +1,3 @@
-import BlogPage from "@/page/Blog";
+import BlogPage from "@/scenes/Blog";
 
 export default BlogPage;
