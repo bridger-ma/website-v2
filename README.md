@@ -72,7 +72,7 @@ Ensure you have the following installed:
 git clone https://github.com/bridger-ma/website-v2
 
 # Navigate to the project directory
-cd bridger-website
+cd bridger-v2
 
 # Install dependencies
 pnpm install
