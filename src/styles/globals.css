@@ -1,0 +1,299 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+.dark body {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 17, 24, 39;
+  --background-end-rgb: 17, 24, 39;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  animation: gradient 15s ease infinite;
+  background-size: 200% auto;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s infinite;
+}
+
+@keyframes wave {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
+}
+
+.animate-wave-effect {
+  animation: wave 2s ease-in-out infinite;
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom styles for the client carousel */
+.client-carousel .slick-dots {
+  bottom: -40px;
+}
+
+.client-carousel .slick-dots li button:before {
+  color: #06b6d4;
+  opacity: 0.5;
+  font-size: 10px;
+}
+
+.client-carousel .slick-dots li.slick-active button:before {
+  color: #3b82f6;
+  opacity: 1;
+}
+
+.client-carousel .slick-prev,
+.client-carousel .slick-next {
+  z-index: 10;
+  width: 30px;
+  height: 30px;
+}
+
+.client-carousel .slick-prev {
+  left: -35px;
+}
+
+.client-carousel .slick-next {
+  right: -35px;
+}
+
+.client-carousel .slick-prev:before,
+.client-carousel .slick-next:before {
+  color: #06b6d4;
+  font-size: 30px;
+}
+
+.hover\:shadow-glow:hover {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+}
+
+/* Dark mode styles */
+.dark .text-gray-900 {
+  color: #f3f4f6;
+}
+
+.dark .bg-white {
+  background-color: #1f2937;
+}
+
+.dark .text-gray-600 {
+  color: #d1d5db;
+}
+
+.dark .border-gray-200 {
+  border-color: #374151;
+}
+
+.dark .hover\:bg-gray-100:hover {
+  background-color: #374151;
+}
+
+.dark .hover\:text-gray-900:hover {
+  color: #f3f4f6;
+}
+
+/* Markdown content styles */
+.prose {
+  color: #f3f4f6; /* text-gray-100 */
+  max-width: none;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  color: #22d3ee; /* text-cyan-400 */
+  margin-top: 2em;
+  margin-bottom: 1em;
+  font-weight: 600;
+}
+
+.prose h1 {
+  font-size: 2.25rem; /* text-4xl */
+}
+
+.prose h2 {
+  font-size: 1.875rem; /* text-3xl */
+}
+
+.prose h3 {
+  font-size: 1.5rem; /* text-2xl */
+}
+
+.prose p {
+  margin-bottom: 1.5em;
+  line-height: 1.75;
+}
+
+.prose a {
+  color: #60a5fa; /* text-blue-400 */
+  text-decoration: underline;
+}
+
+.prose strong {
+  color: #ffffff; /* text-white */
+}
+
+.prose ul,
+.prose ol {
+  margin-left: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.prose li {
+  margin-bottom: 0.5em;
+}
+
+.prose blockquote {
+  border-left: 4px solid #22d3ee; /* border-cyan-400 */
+  padding-left: 1em;
+  margin-left: 0;
+  font-style: italic;
+  color: #9ca3af; /* text-gray-400 */
+}
+
+.prose code {
+  background-color: #121212; /* Dark material-like background */
+  color: #22d3ee; /* text-cyan-200 */
+  padding: 0.2em 0.4em;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1); /* Subtle inner shadow for material effect */
+}
+
+.prose pre {
+  background-color: #121212; /* Dark material-like background */
+  color: #f3f4f6; /* text-gray-100 */
+  padding: 1em;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  border: 1px solid #2d3748; /* border-gray-700 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), inset 0 0 10px rgba(255, 255, 255, 0.1); /* Outer and inner shadow for material effect */
+}
+
+.prose pre code {
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+  border-radius: 0;
+  font-size: inherit;
+  box-shadow: none;
+}
+
+/* Adjust the existing styles for dark mode if necessary */
+.dark .prose {
+  color: #f3f4f6; /* text-gray-100 */
+}
+
+.dark .prose h1,
+.dark .prose h2,
+.dark .prose h3,
+.dark .prose h4,
+.dark .prose h5,
+.dark .prose h6 {
+  color: #22d3ee; /* text-cyan-400 */
+}
+
+.dark .prose a {
+  color: #60a5fa; /* text-blue-400 */
+}
+
+.dark .prose strong {
+  color: #ffffff; /* text-white */
+}
+
+.dark .prose blockquote {
+  color: #9ca3af; /* text-gray-400 */
+}
+
+.dark .prose code {
+  background-color: #121212;
+  color: #22d3ee; /* text-cyan-200 */
+}
+
+.dark .prose pre {
+  background-color: #121212;
+  border-color: #2d3748; /* border-gray-700 */
+}
+
+/* LaTeX styles */
+.katex {
+  font-size: 1.1em;
+}
+
