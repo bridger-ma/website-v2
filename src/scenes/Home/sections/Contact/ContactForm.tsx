@@ -60,17 +60,17 @@ export default function ContactForm({ onSubmitSuccess }: ContactFormProps) {
 
 				<Button
 					type="submit"
-					className="mt-8 w-full bg-gradient-to-r from-blue-500 to-cyan-500"
+					className="mt-8 w-full bg-black/60 backdrop-blur-xl border border-gray-800/50 hover:bg-gray-900/60 hover:border-cyan-500/50 transition-all duration-300 shadow-[0_8px_32px_rgba(0,0,0,0.36)] hover:shadow-[0_8px_32px_rgba(0,128,255,0.25)]"
 					disabled={isSubmitting}
 				>
 					{isSubmitting ? (
 						<>
-							<span className="animate-spin mr-2">⏳</span>
+							<span className="animate-spin mr-2 text-cyan-500">⏳</span>
 							Sending...
 						</>
 					) : (
 						<>
-							<FaPaperPlane className="mr-2" />
+							<FaPaperPlane className="mr-2 text-cyan-500" />
 							Send Message
 						</>
 					)}
